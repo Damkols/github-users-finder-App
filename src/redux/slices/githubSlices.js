@@ -67,7 +67,7 @@ const reposSlices = createSlice({
       state.loading = true;
     });
 
-    builder.addCase(fetchProfileAction.pending, (state, action) => {
+    builder.addCase(fetchProfileAction.fulfilled, (state, action) => {
       state.loading = false;
       state.profile = action?.payload;
       state.error = undefined;

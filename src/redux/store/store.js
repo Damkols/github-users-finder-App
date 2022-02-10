@@ -1,7 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
+import reposReducer from "../slices/githubSlices";
 
 const store = configureStore({
-  reducer: {},
+  reducer: {
+    repos: reposReducer,
+  },
 });
 
 export default store;
